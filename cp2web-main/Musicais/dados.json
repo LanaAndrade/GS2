@@ -1,0 +1,28 @@
+{
+    "produto":[
+        {
+            "id":1,
+            "nome":"Flauta",
+            "valor":200,
+            "qtd":40
+        },
+        {
+            "id":2,
+            "nome":"Violão",
+            "valor":675,
+            "qtd":50
+        },
+        {
+            "id":2,
+            "nome":"Baixo",
+            "valor":500,
+            "qtd":13
+        },
+        {
+            "id":3,
+            "nome":"Guitarra",
+            "valor":1000,
+            "qtd":10
+        }
+    ]
+}
