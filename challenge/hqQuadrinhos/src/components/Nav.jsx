@@ -28,7 +28,7 @@ function Nav() {
           </Link>          
 
           <Link to="/apresentacao" className="tlink">
-            Apresentacao
+            Apresentação
           </Link>
 
           <Link to="/contato" className="tlink">

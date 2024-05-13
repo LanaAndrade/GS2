@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&family=Noto+Serif&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
 * {
   margin: 0;
   padding: 0;
+  font-family: "Comic Neue", cursive;
+  font-weight: bold;
 }
 
 /* *********** Nav *********** */
@@ -81,7 +81,7 @@
 }
 
 .HQs:hover{
-  -webkit-animation: squareToCircle 2s 1s infinite alternate;
+  -webkit-animation: rodar 2s .2s infinite alternate;
 }
 
 .nav-menu a {
@@ -108,7 +108,7 @@
   animation: wiggle 2s linear infinite;
 }
 
-@-webkit-keyframes squareToCircle {
+@-webkit-keyframes rodar {
 
 
   0% {
@@ -363,6 +363,9 @@ footer{
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  padding-top: 3rem;
+  padding-bottom: 8rem;
+  background-color: #9FDEE6;
 }
 
 .slide{
@@ -370,7 +373,7 @@ footer{
 }
 
 .carousel-item img {
-  width: 35rem;
+  height: 35rem;
   border: 2px solid black;
 }
 
@@ -380,4 +383,129 @@ footer{
 
 .carousel-item.active {
   display: flex;
+}
+
+.balaoSetaEsquerda{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../assets/balaoSetaEsquerda.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 9rem;
+  height: 9rem;
+}
+
+.balaoSetaDireita{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../assets/balaoSetaDireita.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 9rem;
+  height: 9rem;
+}
+
+.balaoSetaEsquerda img{
+  width: 6rem;
+  height: 6rem;
+}
+
+.balaoSetaDireita img{
+  width: 6rem;
+  height: 6rem;
+}
+
+.infoHQ{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/nuvemHq.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 22rem;
+  height: 15rem;
+  position: absolute;
+  bottom: -18rem;
+}
+
+.d-inline-block{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* ************ Contato *********/
+
+.contato{
+  height: 40rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  background-color: #9FDEE6;
+}
+
+.pessoa{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3rem;
+}
+
+.imgPessoa-container{
+  width: 8rem;
+  height: 8rem;
+  border-radius: 100%;
+  overflow: hidden; 
+  position: relative; 
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.imgPessoa{
+  width: 8rem; 
+  position: absolute; 
+  object-fit: contain; 
+}
+
+.horizontal{
+  width: auto !important; 
+  height: 8rem !important;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.nomePessoa{
+  color: black;
+  font-size: 1.5rem;
+}
+
+/* ************** Apresentação *****************/
+
+.pitch{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 0.8rem;
+  background-color: #9FDEE6;
+}
+
+#iframe-pitch{
+  border: 2px solid black;
 }
