@@ -9,6 +9,7 @@ import Projeto from './routes/Projeto.jsx';
 import HQs from './routes/HQs.jsx';
 import Apresentacao from './routes/Apresentacao.jsx';
 import AdicionarHq from './routes/AdicionarHq.jsx';
+import AvaliarHQ from './routes/avaliarHq.jsx';
 
 const router = createBrowserRouter ([
   {
@@ -21,6 +22,7 @@ const router = createBrowserRouter ([
       {path: '/HQs',element:<HQs/>},
       {path: '/Apresentacao', element: <Apresentacao />},
       {path: '/Contato', element: <Contato />},
+      {path: '/AvaliarHQ', element: <AvaliarHQ />},
     ]
   }
 ])

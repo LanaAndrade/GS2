@@ -7,6 +7,10 @@
   font-weight: bold;
 }
 
+body{
+  background-color: #9FDEE6;
+}
+
 /* *********** Nav *********** */
 .nav-menu {
   background-color: #9FDEE6;
@@ -23,25 +27,19 @@
 }
 
 #logo:hover {
-  animation: loader-7 4s linear infinite;
+  animation: pulse 1s infinite alternate;
 }
 
-@keyframes loader-7 {
-	0%, 100% {
-		transform: none;
-	}
-	
-	25% {
-		transform: translateX(-25%);
-	}
-	
-	50% {
-		transform: translateX(-22%) translateY(-22%);
-	}
-	
-	75% {
-		transform: translateY(-20%);
-	}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 
@@ -61,7 +59,7 @@
   display: flex;
   list-style: none;
   align-items: center;
-  gap: 10.5rem;
+  gap: 6.5rem;
   font-family: 'Roboto';
   font-weight: 500;
   color: black;
@@ -81,7 +79,8 @@
 }
 
 .HQs:hover{
-  -webkit-animation: rodar 2s .2s infinite alternate;
+  background-image: url("../assets/nuvemMenuExplosao.svg");
+  animation: pulse 1s infinite alternate;
 }
 
 .nav-menu a {
@@ -357,14 +356,21 @@ footer{
 
 /* *********** Hqs ************ */
 
-.carousel{
+.carousel, .carousel-adicional{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.carrossel-grande{
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  padding-top: 3rem;
-  padding-bottom: 8rem;
+  padding-top: 5rem;
+  padding-bottom: 12rem; 
   background-color: #9FDEE6;
 }
 
@@ -373,7 +379,8 @@ footer{
 }
 
 .carousel-item img {
-  height: 35rem;
+  height: 25rem;
+  background-color: #FAF83F;
   border: 2px solid black;
 }
 
@@ -431,7 +438,8 @@ footer{
   width: 22rem;
   height: 15rem;
   position: absolute;
-  bottom: -18rem;
+  bottom: -5rem;
+  cursor: pointer;
 }
 
 .d-inline-block{
@@ -441,6 +449,7 @@ footer{
   flex-direction: column;
   text-align: center;
 }
+
 
 /* ************ Contato *********/
 
@@ -509,3 +518,62 @@ footer{
 #iframe-pitch{
   border: 2px solid black;
 }
+
+/* *************** Avaliar HQ **************** */
+
+.avaliacoes-container{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.teste{
+  background-color: #FAF83F; 
+  border: 4px solid black;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  transform: skew(-5deg);
+}
+
+.avaliacoes-table{
+  min-width: 35rem;
+  border-collapse: separate; /* Make sure to set border-collapse to separate */
+  transform: skew(+5deg);
+}
+
+.avaliacoes-table td{
+  padding: 1.2rem 2rem;
+}
+
+.avaliacoes-table th{
+  padding: 0 10px;
+}
+
+.semItalico{
+  transform: skew(+5deg);
+}
+
+.btnAvaliarHq{
+  font-size: 1rem;
+  padding: 0.6rem;
+  cursor: pointer;
+  background-size: cover;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  border: 2px solid black;
+  transform: skew(-5deg);
+  background-color: #92D050;
+  animation: pulse 1s infinite alternate;
+}
+

@@ -104,9 +104,9 @@ function AdicionarHq() {
           <table>
               <thead>
                   <tr className='tr-header'>
-                      <th className='header-item' >Produto</th>
-                      <th className='header-item' >Quantid.</th>
-                      <th className='header-item' >Preço</th>
+                      <th className='header-item' >História</th>
+                      <th className='header-item' >Avaliação</th>
+                      <th className='header-item' >Comentário</th>
                       <th className='header-item' >Editar</th>
                       <th className='header-item' >Deletar</th>
                   </tr>

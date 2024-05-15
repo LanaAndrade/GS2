@@ -34,6 +34,11 @@ function Nav() {
           <Link to="/contato" className="tlink">
             Contato
           </Link>
+
+          <Link to="/avaliarHq" className="tlink">
+            Avaliar HQ
+          </Link>
+
         </ul>
       </nav>
       

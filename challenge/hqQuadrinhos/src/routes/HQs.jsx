@@ -1,92 +1,169 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import instrumento1 from '/src/assets/Instrumento1.svg';
-
-import instrumento3 from '/src/assets/instrumento3.svg';
-import instrumento4 from '/src/assets/instrumento4.svg';
 import setaEsquerda from '/src/assets/setaEsquerda.svg';
 import setaDireita from '/src/assets/setaDireita.svg';
-import HqCoronavirus from '/src/assets/HQ-CORONAVIRUS-01.jpg';
-import tirinhasarampo from '/src/assets/tirinhasarampo.png';
-import lombriga from '/src/assets/lombriga.png';
+import HqCoronavirus1 from '/src/assets/hqCoronavirus1.jpg';
+import HqCoronavirus2 from '/src/assets/hqCoronavirus2.jpg';
+import HqCoronavirus3 from '/src/assets/hqCoronavirus3.jpg';
+import lombriga1 from '/src/assets/lombriga1.png';
+import lombriga2 from '/src/assets/lombriga2.png';
+import lombriga3 from '/src/assets/lombriga3.png';
+import lombriga4 from '/src/assets/lombriga4.png';
+
 
 function HQs() {
+  const [currentMainSlide, setCurrentMainSlide] = useState(0);
+  const [currentAdditionalSlide, setCurrentAdditionalSlide] = useState(0);
+  const [showMainCarousel, setShowMainCarousel] = useState(true);
 
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const nextSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide === 2 ? 0 : prevSlide + 1));
+  const nextMainSlide = () => {
+    setCurrentMainSlide((prevSlide) => (prevSlide === 2 ? 0 : prevSlide + 1));
   };
 
-  const prevSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide === 0 ? 2 : prevSlide - 1));
+  const prevMainSlide = () => {
+    setCurrentMainSlide((prevSlide) => (prevSlide === 0 ? 2 : prevSlide - 1));
+  };
+
+  const nextAdditionalSlide = () => {
+    setCurrentAdditionalSlide((prevSlide) => (prevSlide === 3 ? 0 : prevSlide + 1));
+  };
+
+  const prevAdditionalSlide = () => {
+    setCurrentAdditionalSlide((prevSlide) => (prevSlide === 0 ? 3 : prevSlide - 1));
+  };
+
+  const handleCarouselTransition = () => {
+    setCurrentMainSlide(0);
+    setShowMainCarousel((prevShowMainCarousel) => !prevShowMainCarousel);
   };
 
   return (
-    <section className='carousel'>
+    <section className="carrossel-grande">
+      {showMainCarousel ? (
+        <section className="carousel">
+          <a className="" href="#carouselExampleIndicators" role="button" data-slide="prev" onClick={prevMainSlide}>
+            <span className="" aria-hidden="true"></span>
+            <span className="balaoSetaEsquerda">  
+              <img src={setaEsquerda} className="" alt="First slide"></img>
+            </span>
+          </a>
 
-      <a className="" href="#carouselExampleIndicators" role="button" data-slide="prev" onClick={prevSlide}>
-        <span className="" aria-hidden="true"></span>
-        <span className="balaoSetaEsquerda">  
-          <img src={setaEsquerda} className="" alt="First slide"></img>
-        </span>
-      </a>
-
-      <div>
-
-        <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
-          <div className="carousel-inner">
-            <div className={`carousel-item ${currentSlide === 0 ? 'active' : ''}`}>
-              <div className="d-inline-block">
-                <div className="slideImgDiv">
-                  <img src={tirinhasarampo} className="slideImg" alt="First slide"></img>
+          <div>
+            <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
+              <div className="carousel-inner">
+                <div className={`carousel-item ${currentMainSlide === 0 ? 'active' : ''}`}>
+                  <div className="d-inline-block">
+                    <div className="slideImgDiv">
+                      <img src={HqCoronavirus1} className="slideImg" alt="First slide"></img>
+                    </div>
+                    <div className="infoHQ" onClick={() => handleCarouselTransition()}>
+                    <p className='nomeHQ'>Coronavírus: O visitante indesejado</p>
+                      <p className='exameHQ'>Mirella Sapondi: Coronavírus</p> 
+                    </div>
+                  </div>
                 </div>
-                <div className="infoHQ">
-                  <p className='nomeHQ'>O Raio-X Mágico de Rafael</p>
-                  <p className='exameHQ'>Raio-X</p> 
+                <div className={`carousel-item ${currentMainSlide === 1 ? 'active' : ''}`}>
+                  <div className="d-inline-block">
+                    <div className="slideImgDiv">
+                      <img src={HqCoronavirus2} className="slideImg" alt="Second slide"></img>
+                    </div>
+                    <div className="infoHQ" onClick={() => handleCarouselTransition()}>
+                      <p className='nomeHQ'>Coronavírus: O visitante indesejado</p>
+                      <p className='exameHQ'>Mirella Sapondi: Coronavírus</p> 
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            </div>
-            <div className={`carousel-item ${currentSlide === 1 ? 'active' : ''}`}>
-              <div className="d-inline-block">
-              <div className="slideImgDiv">
-                  <img src={HqCoronavirus} className="slideImg" alt="First slide"></img>
+                <div className={`carousel-item ${currentMainSlide === 2 ? 'active' : ''}`}>
+                  <div className="d-inline-block">
+                    <div className="slideImgDiv">
+                      <img src={HqCoronavirus3} className="slideImg" alt="Third slide"></img>
+                    </div>
+                    <div className="infoHQ" onClick={() => handleCarouselTransition()}>
+                    <p className='nomeHQ'>Coronavírus: O visitante indesejado</p>
+                      <p className='exameHQ'>Mirella Sapondi: Coronavírus</p> 
+                    </div>
+                  </div>
                 </div>
-                <div className="infoHQ">
-                  <p className='nomeHQ'>As Incríveis Viagens de Vitória na Veia</p>
-                  <p className='exameHQ'>Hemograma</p> 
-                </div>
-              </div>
-            </div>
-            <div className={`carousel-item ${currentSlide === 2 ? 'active' : ''}`}>
-              <div className="d-inline-block">
-                <div className="slideImgDiv">
-                  <img src={lombriga} className="slideImg" alt="First slide"></img>
-                </div>
-                <div className="infoHQ">
-                  <p className='nomeHQ'>Missão secreta de espia: dentro do corpo</p>
-                  <p className='exameHQ'>Ressonância Magnética</p>
-                </div> 
               </div>
             </div>
           </div>
 
-      </div>
+          <a className="" href="#carouselExampleIndicators" role="button" data-slide="next" onClick={nextMainSlide}>
+            <span className="" aria-hidden="true"></span>
+            <span className="balaoSetaDireita"> 
+              <img src={setaDireita} className="" alt="Last slide"></img>
+            </span>
+          </a>
+        </section>
+      ) : (
+        <section className="carousel-adicional">
+          <a className="" href="#carouselExampleIndicators" role="button" data-slide="prev" onClick={prevAdditionalSlide}>
+            <span className="" aria-hidden="true"></span>
+            <span className="balaoSetaEsquerda">  
+              <img src={setaEsquerda} className="" alt="First slide"></img>
+            </span>
+          </a>
 
-      <a className="" href="#carouselExampleIndicators" role="button" data-slide="next" onClick={nextSlide}>
-          <span className="" aria-hidden="true"></span>
-          <span className="balaoSetaDireita"> 
-            <img src={setaDireita} className="" alt="First slide"></img>
-          </span>
-      </a>
+          <div className="carousel-inner">
+            <div className={`carousel-item ${currentAdditionalSlide === 0 ? 'active' : ''}`}>
+              <div className="d-inline-block">
+                <div className="slideImgDiv">
+                  <img src={lombriga1} className="slideImg" alt="First slide"></img>
+                </div>
+                <div className="infoHQ" onClick={handleCarouselTransition}>
+                <p className='nomeHQ'>Lombriga não, obrigado!</p>
+                  <p className='exameHQ'>Lombrigas</p> 
+                </div>
+              </div>
+            </div>
+            <div className={`carousel-item ${currentAdditionalSlide === 1 ? 'active' : ''}`}>
+              <div className="d-inline-block">
+                <div className="slideImgDiv">
+                  <img src={lombriga2} className="slideImg" alt="Second slide"></img>
+                </div>
+                <div className="infoHQ" onClick={handleCarouselTransition}>
+                <p className='nomeHQ'>Lombriga não, obrigado!</p>
+                  <p className='exameHQ'>Lombrigas</p> 
+                </div>
+              </div>
+            </div>
+            <div className={`carousel-item ${currentAdditionalSlide === 2 ? 'active' : ''}`}>
+              <div className="d-inline-block">
+                <div className="slideImgDiv">
+                  <img src={lombriga3} className="slideImg" alt="Second slide"></img>
+                </div>
+                <div className="infoHQ" onClick={handleCarouselTransition}>
+                  <p className='nomeHQ'>Lombriga não, obrigado!</p>
+                  <p className='exameHQ'>Lombrigas</p> 
+                </div>
+              </div>
+            </div>
+            <div className={`carousel-item ${currentAdditionalSlide === 3 ? 'active' : ''}`}>
+              <div className="d-inline-block">
+                <div className="slideImgDiv">
+                  <img src={lombriga4} className="slideImg" alt="Second slide"></img>
+                </div>
+                <div className="infoHQ" onClick={handleCarouselTransition}>
+                <p className='nomeHQ'>Lombriga não, obrigado!</p>
+                  <p className='exameHQ'>Lombrigas</p> 
+                </div>
+              </div>
+            </div>
 
+          </div>
 
+          <a className="" href="#carouselExampleIndicators" role="button" data-slide="next" onClick={nextAdditionalSlide}>
+            <span className="" aria-hidden="true"></span>
+            <span className="balaoSetaDireita"> 
+              <img src={setaDireita} className="" alt="Last slide"></img>
+            </span>
+          </a>
+        </section>
+      )}
     </section>
   );
 }
 
 export default HQs;
-
 
