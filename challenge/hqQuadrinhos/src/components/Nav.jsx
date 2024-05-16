@@ -19,17 +19,13 @@ function Nav() {
         {''}
 
         <ul>
-          <Link to="/AdicionarHq" className="tlink">
-            Adicionar HQ
-          </Link>
-
-          <Link to="/HQs" className="HQs">
-            HQs
-          </Link>          
-
           <Link to="/apresentacao" className="tlink">
             Apresentação
           </Link>
+          
+          <Link to="/HQs" className="HQs">
+            HQs
+          </Link>          
 
           <Link to="/contato" className="tlink">
             Contato
