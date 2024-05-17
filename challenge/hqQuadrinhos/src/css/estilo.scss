@@ -191,6 +191,55 @@ body{
   cursor: pointer;
 }
 
+.bars{
+  color: white;
+  background-color: #000137;
+  border:none;
+  font-size: 2rem;
+  text-align: right;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.nav-menu-mobile{
+  width: 100%;
+  background-color: #000137;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  align-self: flex-end;
+  display: none;
+}
+
+#logoResponsivo{
+  width: 1rem;
+  display: flex;
+  flex-direction: row;
+}
+#logoResponsivo img{
+  height: 3rem;
+}
+
+/* Media query para telas menores que 768px (tablets) */
+@media (max-width: 768px) {
+  .nav-menu-mobile {
+      display: flex;
+  }
+  .nav-menu{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+  }
+
+  .nav-menu ul{
+    flex-direction: column;
+    gap: 2rem;
+  }
+  #logo{
+    display: none;
+  }
+}
 
 /* *************** Footer *****************/
 
@@ -274,7 +323,7 @@ footer{
 }
 
 .cliqueAqui:hover{
-  color: black;
+  color: #9FDEE6;
 }
 
 #email{
@@ -341,6 +390,61 @@ footer{
   }
 }
 
+/* Media query para telas menores que 768px (tablets) */
+@media (max-width: 768px) {
+  .footer, .footer-container {
+      flex-direction: column;
+      height: auto;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+  .Coluna1, .Coluna2, .Coluna3, .footerFrmEmailESubmit {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+}
+
+/* Media query para telas menores que 480px (smartphones) */
+@media (max-width: 480px) {
+  .footer, .footer-container {
+    width: 100%;
+    height: 30rem;
+    padding-top: 4rem;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+
+  }
+  .Coluna1, .Coluna2, .Coluna3, .footerFrmEmailESubmit {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .social-media{
+    gap: .4rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .icon{
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .frmFooterEmail input{
+    width: 80%;
+  }
+  .btnFrmEmail{
+    width: 16%;
+  }
+}
 /* ************** Home **************** */
 
 .Projeto{
@@ -384,6 +488,38 @@ footer{
   text-align: center;
 }
 
+/* Media query para telas menores que 768px (tablets) */
+@media (max-width: 768px) {
+  .homeRow {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+/* Media query para telas menores que 480px (smartphones) */
+@media (max-width: 480px) {
+  .homeRow {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .imgHomeDiv{
+    width: 100%;
+    height: auto;
+  }
+  .pHome{
+    width: 100%;
+  }
+}
 /* *********** Hqs ************ */
 
 .carousel, .carousel-adicional{
@@ -483,11 +619,111 @@ footer{
   text-align: center;
 }
 
+/* Media query para telas menores que 768px (tablets) */
+@media (max-width: 768px) {
+  .carrossel-grande{
+    width: 100%;
+    height: fit-content;
+  }
+  .carousel{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+  }
+  .balaoSetaEsquerda{
+    width: 3rem;
+    height: 3rem;
+    }
+  .balaoSetaDireita{
+    width: 3rem;
+    height: 3rem;
+    }
+  .carousel-item img {
+    width: 90%;
+    height: auto;
+  }
+  .balaoSetaEsquerda img{
+    width: 70%;
+    height: auto;
+  }
+  
+  .balaoSetaDireita img{
+    width: 70%;
+    height: auto;
+  }
+  .infoHQ{
+    width: 60%;
+    height: 15%;
+    bottom: 8rem;
+  } 
+  
+}
+
+@media (max-width: 296px) {
+  .infoHQ{
+    width: 60%;
+    height: 15%;
+    bottom: 11rem;
+  } 
+
+  @media (max-width: 480px) {
+    .infoHQ{
+      height: 10%;
+      bottom: 16rem;
+    } 
+  }
+}
+
+@media (max-width: 380px) {
+
+  .balaoSetaEsquerda{
+    width: 1rem;
+    height: 1rem;
+  }
+  .balaoSetaDireita{
+    width: 1rem;
+    height: 1rem;
+  }
+  .carousel-item img {
+    width: 90%;
+    height: auto;
+  }
+  .balaoSetaEsquerda img{
+    width: 70%;
+    height: auto;
+  }
+  
+  .balaoSetaDireita img{
+    width: 70%;
+    height: auto;
+  }
+  .infoHQ{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    width: 60%;
+    height: 10%;
+    bottom: 16rem;
+  } 
+  
+}
+
+@media (max-width: 250px) {
+  .infoHQ{
+    width: 60%;
+    height: 8%;
+    bottom: 19rem;
+  } 
+}
 
 /* ************ Contato *********/
 
 .contato{
-  height: 40rem;
+  min-height: 40rem;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -533,6 +769,24 @@ footer{
   font-size: 1.5rem;
 }
 
+/* Media query para telas menores que 768px (tablets) */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    gap: 2rem;
+  }
+}
+
+/* Media query para telas menores que 480px (smartphones) */
+@media (max-width: 480px) {
+  .pessoa{
+    display: flex;
+    flex-direction: column;
+  }
+}
 /* ************** Apresentação *****************/
 
 .pitch {
@@ -549,8 +803,29 @@ footer{
 
 #iframe-pitch{
   border: 2px solid black;
+  width: 700px;
+  height: 395px;
 }
 
+/* Media query para telas menores que 768px (tablets) */
+@media (max-width: 768px) {
+  #iframe-pitch {
+      width: 480px;
+      height: 360px;
+  }
+}
+
+/* Media query para telas menores que 480px (smartphones) */
+@media (max-width: 480px) {
+  #iframe-pitch {
+    width: 150px;
+    height: 100px;
+  }
+  #pitch-title{
+    font-size:.1rem !important;
+  }  
+
+}
 /* *************** Avaliar HQ **************** */
 
 .avaliacoes-container{
@@ -574,8 +849,9 @@ footer{
   transform: skew(-5deg);
 }
 
+
 .avaliacoes-table{
-  min-width: 35rem;
+  width:50rem;
   border-collapse: separate; /* Make sure to set border-collapse to separate */
   transform: skew(+5deg);
 }
@@ -607,6 +883,126 @@ footer{
   transform: skew(-5deg);
   background-color: #92D050;
   animation: pulse 1s infinite alternate;
+}
+
+@media (max-width: 928px) {
+  .avaliacoes-table {
+      width: 100%;
+      align-self: center;
+      
+  }
+  .teste{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Media query para telas menores que 768px (tablets) */
+@media (max-width: 768px) {
+  .teste {
+      transform: skew(0deg);
+    }
+  .avaliacoes-table {
+    width: 100%;
+    align-self: center; 
+    transform: skew(0deg);
+  }
+  
+}
+
+@media (max-width: 480px) {
+
+  .teste{
+    transform: skew(0deg);
+  }
+  
+  .avaliacoes-table{
+    transform: skew(0deg);
+    overflow-x: auto;
+    width: 100%;
+    min-width: 600px;
+    border-collapse: collapse;
+
+  }
+
+  .avaliacoes-table thead {
+    display: none;
+  }
+  .avaliacoes-table td, .avaliacoes-table th {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+    word-break: break-word; 
+    white-space: normal; 
+
+  }
+  .avaliacoes-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding-left: 0px;
+    font-weight: bold;
+    text-align: left;
+  }
+
+}
+
+/* Media query para telas menores que 480px (smartphones) */
+@media (max-width: 480px) {
+
+
+  .avaliacoes-table{
+    transform: skew(0deg);
+    overflow-x: auto;
+    width: 100%;
+    min-width: 600px;
+    border-collapse: collapse;
+    font-size: .7rem;
+  }
+
+  .avaliacoes-table thead {
+    display: none;
+  }
+  .avaliacoes-table td {
+    display: block;
+    width: 95%;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+    word-break: break-word; 
+    white-space: normal; 
+  }
+  .avaliacoes-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 0px;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  .btnAvaliarHq{
+    font-size: .8rem;
+  }
+}
+
+@media (max-width: 250px) {
+ .avaliacoes-table{
+   font-size: .3rem; 
+ }
+  .teste h1{
+    font-size: 0.8rem;
+  }
+  .teste img{
+    width: 0.8rem;
+  }
 }
 
 /*Comentário*/

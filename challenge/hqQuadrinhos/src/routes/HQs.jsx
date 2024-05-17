@@ -58,8 +58,8 @@ function HQs() {
                       <img src={HqCoronavirus1} className="slideImg" alt="First slide"></img>
                     </div>
                     <div className="infoHQ" onClick={() => handleCarouselTransition()}>
-                    <p className='nomeHQ'>Coronavírus: O visitante indesejado</p>
-                      <p className='exameHQ'>Mirella Sapondi: Coronavírus</p> 
+                    <p className='nomeHQ'></p>
+                      <p className='exameHQ'></p> 
                     </div>
                   </div>
                 </div>
@@ -69,8 +69,8 @@ function HQs() {
                       <img src={HqCoronavirus2} className="slideImg" alt="Second slide"></img>
                     </div>
                     <div className="infoHQ" onClick={() => handleCarouselTransition()}>
-                      <p className='nomeHQ'>Coronavírus: O visitante indesejado</p>
-                      <p className='exameHQ'>Mirella Sapondi: Coronavírus</p> 
+                      <p className='nomeHQ'></p>
+                      <p className='exameHQ'></p> 
                     </div>
                   </div>
                 </div>
@@ -80,8 +80,8 @@ function HQs() {
                       <img src={HqCoronavirus3} className="slideImg" alt="Third slide"></img>
                     </div>
                     <div className="infoHQ" onClick={() => handleCarouselTransition()}>
-                    <p className='nomeHQ'>Coronavírus: O visitante indesejado</p>
-                      <p className='exameHQ'>Mirella Sapondi: Coronavírus</p> 
+                    <p className='nomeHQ'></p>
+                      <p className='exameHQ'></p> 
                     </div>
                   </div>
                 </div>
@@ -123,8 +123,8 @@ function HQs() {
                   <img src={lombriga2} className="slideImg" alt="Second slide"></img>
                 </div>
                 <div className="infoHQ" onClick={handleCarouselTransition}>
-                <p className='nomeHQ'>Lombriga não, obrigado!</p>
-                  <p className='exameHQ'>Lombrigas</p> 
+                <p className='nomeHQ'></p>
+                  <p className='exameHQ'></p> 
                 </div>
               </div>
             </div>
@@ -134,8 +134,8 @@ function HQs() {
                   <img src={lombriga3} className="slideImg" alt="Second slide"></img>
                 </div>
                 <div className="infoHQ" onClick={handleCarouselTransition}>
-                  <p className='nomeHQ'>Lombriga não, obrigado!</p>
-                  <p className='exameHQ'>Lombrigas</p> 
+                  <p className='nomeHQ'></p>
+                  <p className='exameHQ'></p> 
                 </div>
               </div>
             </div>
@@ -145,8 +145,8 @@ function HQs() {
                   <img src={lombriga4} className="slideImg" alt="Second slide"></img>
                 </div>
                 <div className="infoHQ" onClick={handleCarouselTransition}>
-                <p className='nomeHQ'>Lombriga não, obrigado!</p>
-                  <p className='exameHQ'>Lombrigas</p> 
+                <p className='nomeHQ'></p>
+                  <p className='exameHQ'></p> 
                 </div>
               </div>
             </div>
