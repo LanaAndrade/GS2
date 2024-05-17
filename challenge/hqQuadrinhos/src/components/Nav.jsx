@@ -1,6 +1,6 @@
 import {} from 'react';
 import { Link } from 'react-router-dom';
-import '../css/estilo.css';
+import '../css/estilo.scss';
 import logo from '../assets/LOGO.svg';
 import logoHDQ from '../assets/LogoHDQ.svg';
 

@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import ListaProdutos from './ListaProdutos';
-import '../css/estilo.css';
+import '../css/estilo.scss';
 
 function Login() {
   /* Hook- useRef ele retorna uma referencia a um elemento ou componentsem tem que ter que ser

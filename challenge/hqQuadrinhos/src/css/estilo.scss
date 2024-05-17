@@ -597,14 +597,6 @@ footer{
   align-items: center;
   /*background-image: linear-gradient(to right, darkcyan,#000137);
 */
-  --dotSize: 0.25rem;
-  --mask: linear-gradient(to right, rgb(0 0 0), rgb(0 0 0 / 0.5));
-  --stop1: 3%;
-  --stop2: 90%;
-  aspect-ratio: 1;
-  position: relative;
-  background: white;
-  filter: contrast(50);
 
 }
 

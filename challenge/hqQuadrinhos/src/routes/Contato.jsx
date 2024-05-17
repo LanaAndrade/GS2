@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import '../css/estilo.css';
+import '../css/estilo.scss';
 
 import caio from '../assets/caio.jpeg';
 import lana from '../assets/lana.jpeg';
