@@ -58,6 +58,14 @@ function Contato() {
             </div>
             <p className="nomePessoa">Felipe Santana</p>
           </div>
+
+          <div className="pessoa">
+            <div className='imgPessoa-container'>
+              <img className='imgPessoa horizontal' src="" alt="Desenvolvedor"></img>
+            </div>
+            <p className="nomePessoa">Enzo Barbeli</p>
+          </div>
+
         </div>
 
         <div className="row">
@@ -73,16 +81,15 @@ function Contato() {
             </div>
             <p className="nomePessoa">Lucas Garcia</p>
           </div>
-        </div>
-
-        <div className="row">
           <div className="pessoa">
             <div className='imgPessoa-container'>
               <img className='imgPessoa' src={mateus} alt="Desenvolvedor"></img>
             </div>
             <p className="nomePessoa">Mateus Tibão</p>
           </div>
+
         </div>
+
 
     </section>
   );

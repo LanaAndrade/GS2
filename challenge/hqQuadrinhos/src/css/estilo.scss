@@ -490,8 +490,7 @@ footer{
   height: 40rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  justify-content: center;
+  justify-content: space-evenly;
   background-color: #9FDEE6;
 }
 
@@ -560,12 +559,6 @@ footer{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-<<<<<<< HEAD:challenge/hqQuadrinhos/src/css/estilo.scss
-  /*background-image: linear-gradient(to right, darkcyan,#000137);
-*/
-=======
-  background-image: linear-gradient(to right, darkcyan,#000137);
->>>>>>> b4ff005dcc85379e9554dd2f60442ca6e5207832:challenge/hqQuadrinhos/src/css/estilo.css
 
 }
 
