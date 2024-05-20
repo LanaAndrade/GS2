@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import instrumento1 from '/src/assets/Instrumento1.svg';
-import instrumento3 from '/src/assets/instrumento3.svg';
+import CriançaComGibi1 from '/src/assets/CriançaComGibi1.jpg';
+import CriançaComGibi2 from '/src/assets/CriançaComGibi2.jpg';
 
 function Projeto() {
 
@@ -11,7 +11,7 @@ function Projeto() {
       <div className="homeRow">
 
         <div className="imgHomeDiv">
-            <img src={instrumento1} alt="Project image" className="imgHome"></img>
+            <img src={CriançaComGibi1} alt="Project image" className="imgHome"></img>
         </div>
         <p className='pHome'>
             Nosso projeto "Hospital dos Quadrinhos" trata de transformar a forma que um paciente criança se relaciona com a informação e com o exame si. Assim, usa histórias em quadrinhos digitais informativas para acalmar tanto o paciente quanto os responsáveis, além de informar de forma lúdica, evitando traumas, estresses e sedações desnecessárias por conta da falta de informações.
@@ -26,7 +26,7 @@ function Projeto() {
         </p>
 
         <div className="imgHomeDiv">
-            <img src={instrumento3} alt="Project image" className="imgHome"></img>
+            <img src={CriançaComGibi2} alt="Project image" className="imgHome"></img>
         </div>
 
       </div>

@@ -17,7 +17,7 @@ body{
 
 /* *********** Nav *********** */
 .nav-menu {
-  background-color: var(--bg-color);
+  background-color: #000137;
   display: flex;
   padding: 0.9rem 2.8rem;
   justify-content: center;
@@ -115,24 +115,17 @@ body{
 }
 
 .tlink {
-  font-size: 2rem;
-  padding: 5px;
+  font-size: 20px;
   color: black;
   text-decoration: none;
-  font-size: 1rem;
   background-color: #FAF83F;
   padding: 0.6rem;
   padding-left: 0.8rem;
   padding-right: 0.8rem;
-  border: black;
-  border-style: solid;
-  border-width: 2px;
-
 }
 .tlink:hover{
   color: black;
-  border-bottom:  3px solid red;
-  animation: wiggle 2s linear infinite;
+  animation: efeito 0.8s  infinite alternate;
 }
 
 @-webkit-keyframes rodar {
@@ -452,7 +445,8 @@ footer{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #9FDEE6;
+  background-image: linear-gradient(to right, #000137 ,#9FDEE6 100px, #9FDEE6 1375px , #000137);
+  
 
 }
 
@@ -471,8 +465,8 @@ footer{
 }
 
 .imgHomeDiv{
-  width: 20rem; 
-  height: 20rem; 
+  width: 30rem; 
+  height: 30rem; 
   overflow: hidden; 
   display: flex;
   justify-content: center;
@@ -484,7 +478,8 @@ footer{
 }
 
 .pHome{
-  width: 25rem;
+  font-size: 30px;
+  width: 35rem;
   text-align: center;
 }
 
@@ -498,6 +493,13 @@ footer{
     gap: 3rem;
     padding-top: 3rem;
     padding-bottom: 3rem;
+  }
+  .imgHomeDiv{
+    width: 500px;
+    height: 500px;
+  }
+  .pHome{
+    font-size: 20px;
   }
 }
 
@@ -513,11 +515,13 @@ footer{
     padding-bottom: 3rem;
   }
   .imgHomeDiv{
-    width: 100%;
-    height: auto;
+
+    width: 230px;
+    height: 230px;
   }
   .pHome{
-    width: 100%;
+    font-size: 18px;
+    width: 90%;
   }
 }
 /* *********** Hqs ************ */
@@ -569,8 +573,8 @@ footer{
   width: 9rem;
   height: 9rem;
 }
-.balaoSetaEsquerda:hover{
-
+.balaoSetaEsquerda:hover {
+  animation: pulse 1s infinite alternate;
 }
 
 .balaoSetaDireita{
@@ -585,6 +589,10 @@ footer{
   height: 9rem;
 }
 
+.balaoSetaDireita:hover {
+  animation: pulse 1s infinite alternate;
+}
+
 .balaoSetaEsquerda img{
   width: 6rem;
   height: 6rem;
@@ -596,6 +604,7 @@ footer{
 }
 
 .infoHQ{
+  font-size: 23px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -609,6 +618,11 @@ footer{
   position: absolute;
   bottom: -5rem;
   cursor: pointer;
+}
+
+.infoHQ:hover {
+  animation: efeito 0.8s  infinite alternate;
+  animation: pulse 5s infinite alternate;
 }
 
 .d-inline-block{
@@ -633,12 +647,12 @@ footer{
     height: fit-content;
   }
   .balaoSetaEsquerda{
-    width: 3rem;
-    height: 3rem;
+    width: 4rem;
+    height: 4rem;
     }
   .balaoSetaDireita{
-    width: 3rem;
-    height: 3rem;
+    width: 4rem;
+    height: 4rem;
     }
   .carousel-item img {
     width: 90%;
@@ -654,123 +668,80 @@ footer{
     height: auto;
   }
   .infoHQ{
+    font-size: 12px;
+    width: 100%;
     width: 60%;
     height: 15%;
-    bottom: 8rem;
+    bottom: 14rem;
   } 
   
-}
+} 
 
-@media (max-width: 296px) {
-  .infoHQ{
-    width: 60%;
-    height: 15%;
-    bottom: 11rem;
-  } 
-
-  @media (max-width: 480px) {
+  @media (max-width: 426px) {
+    .balaoSetaDireita{
+      width: 4rem;
+      height: 4rem;
+    }
+    .balaoSetaEsquerda{
+      width: 4rem;
+      height: 4rem;
+    }
     .infoHQ{
+      font-size: 9px;
       height: 10%;
       bottom: 16rem;
     } 
   }
-}
-
-@media (max-width: 380px) {
-
-  .balaoSetaEsquerda{
-    width: 1rem;
-    height: 1rem;
-  }
-  .balaoSetaDireita{
-    width: 1rem;
-    height: 1rem;
-  }
-  .carousel-item img {
-    width: 90%;
-    height: auto;
-  }
-  .balaoSetaEsquerda img{
-    width: 70%;
-    height: auto;
-  }
   
-  .balaoSetaDireita img{
-    width: 70%;
-    height: auto;
-  }
-  .infoHQ{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-position: center;
-    width: 60%;
-    height: 10%;
-    bottom: 16rem;
-  } 
-  
-}
 
-@media (max-width: 250px) {
-  .infoHQ{
-    width: 60%;
-    height: 8%;
-    bottom: 19rem;
-  } 
-}
 
 /* ************ Contato *********/
 
-.contato{
+.contato {
   min-height: 40rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  grid-auto-rows: 1fr; 
+  grid-auto-flow: row dense; 
+  background-color: #9FDEE6;
+  padding: 2rem; 
+  background-image: linear-gradient(to right, #000137 ,#9FDEE6 100px, #9FDEE6 1375px , #000137);
+}
+
+.pessoa {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  background-color: #9FDEE6;
-}
-
-.pessoa{
-  display: flex;
-  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  gap: 3rem;
 }
 
-.imgPessoa-container{
-  width: 8rem;
-  height: 8rem;
+.imgPessoa-container {
+  width: 10rem;
+  height: 10rem;
   border-radius: 100%;
-  overflow: hidden; 
-  position: relative; 
+  overflow: hidden;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
-.imgPessoa{
-  width: 8rem; 
-  position: absolute; 
-  object-fit: contain; 
+
+.imgPessoa {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
 }
 
-.horizontal{
-  width: auto !important; 
-  height: 8rem !important;
-}
-
-.row{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-.nomePessoa{
+.nomePessoa {
   color: black;
   font-size: 1.5rem;
 }
 
-/* Media query para telas menores que 768px (tablets) */
+
+
+
 @media (max-width: 768px) {
+  .contato {background-image: linear-gradient(to right, #000137 ,#9FDEE6 100px, #9FDEE6 675px , #000137);
+  }
   .row {
     flex-direction: column;
     align-items: center;
@@ -780,11 +751,14 @@ footer{
   }
 }
 
-/* Media query para telas menores que 480px (smartphones) */
+
 @media (max-width: 480px) {
-  .pessoa{
-    display: flex;
-    flex-direction: column;
+  .contato {background-image: linear-gradient(to right, #000137 ,#9FDEE6 270px , #000137);
+  }
+
+  .imgPessoa{
+    width: 80px;
+    height: 80px;
   }
 }
 /* ************** Apresentação *****************/
@@ -797,9 +771,11 @@ footer{
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  font-size: 0.8rem;
+  font-size: 25px;
+  color: aliceblue;
   background: radial-gradient(darkcyan, #000137);
 }
+
 
 #iframe-pitch{
   border: 2px solid black;
@@ -809,6 +785,9 @@ footer{
 
 /* Media query para telas menores que 768px (tablets) */
 @media (max-width: 768px) {
+  .pitch {
+    font-size: 14px;
+  }
   #iframe-pitch {
       width: 480px;
       height: 360px;
@@ -818,13 +797,12 @@ footer{
 /* Media query para telas menores que 480px (smartphones) */
 @media (max-width: 480px) {
   #iframe-pitch {
-    width: 150px;
-    height: 100px;
+    width: 250px;
+    height: 200px;
   }
-  #pitch-title{
-    font-size:.1rem !important;
-  }  
-
+  .pitch {
+    font-size: 8px;
+  }
 }
 /* *************** Avaliar HQ **************** */
 

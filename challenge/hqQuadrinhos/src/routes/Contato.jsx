@@ -5,7 +5,8 @@ import caio from '../assets/caio.jpeg';
 import lana from '../assets/lana.jpeg';
 import mateus from '../assets/mateus.jpeg';
 import lucas from '../assets/lucas.jpeg';
-
+import felipe from '../assets/felipe.jpeg';
+import enzo from '../assets/enzo.jpeg'
 function Contato() {
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
@@ -54,14 +55,14 @@ function Contato() {
           </div>
           <div className="pessoa">
             <div className='imgPessoa-container'>
-              <img className='imgPessoa' src='{}' alt="Desenvolvedor"></img>
+              <img className='imgPessoa' src={felipe} alt="Desenvolvedor"></img>
             </div>
             <p className="nomePessoa">Felipe Santana</p>
           </div>
 
           <div className="pessoa">
             <div className='imgPessoa-container'>
-              <img className='imgPessoa horizontal' src="" alt="Desenvolvedor"></img>
+              <img className='imgPessoa horizontal' src={enzo} alt="Desenvolvedor"></img>
             </div>
             <p className="nomePessoa">Enzo Barbeli</p>
           </div>
