@@ -231,6 +231,7 @@ body{
 
 @media (max-width: 430px) {
   .nav-menu{
+    margin-left: 180px;
     height: 75px;
     width: 300px;
     gap: 10px;
@@ -239,7 +240,7 @@ body{
     gap:7px;
   }
   #itemnav{
-    font-size: 10px;
+    font-size: 15px;
   }
 }
 
@@ -414,17 +415,17 @@ footer{
 /* Media query para telas menores que 480px (smartphones) */
 @media (max-width: 480px) {
   .footer, .footer-container {
-    width: 100%;
+    margin-left: 50px;
+    font-size: 20px;
+    width: 500px;
     height: 30rem;
     padding-top: 4rem;
     flex-direction: column;
     height: auto;
     align-items: center;
     justify-content: center;
-
   }
   .Coluna1, .Coluna2, .Coluna3, .footerFrmEmailESubmit {
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -493,19 +494,19 @@ footer{
 }
 
 /* Media query para telas menores que 768px (tablets) */
-@media (max-width: 768px) {
+@media (max-width: 769px) {
+  .Projeto{
+    height: 100%;
+    width: 769px;
+  }
   .homeRow {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 300px;
     gap: 3rem;
     padding-top: 3rem;
     padding-bottom: 3rem;
-  }
-  .imgHomeDiv{
-    width: 500px;
-    height: 500px;
   }
   .pHome{
     font-size: 20px;
@@ -518,19 +519,15 @@ footer{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    gap: 3rem;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    height: auto;
+    width: auto;
   }
   .imgHomeDiv{
-
-    width: 230px;
-    height: 230px;
+    width: 500px;
+    height: 500px;
   }
   .pHome{
-    font-size: 18px;
-    width: 90%;
+    font-size: 25px;
   }
 }
 /* *********** Hqs ************ */
@@ -873,26 +870,9 @@ footer{
   animation: pulse 1s infinite alternate;
 }
 
-@media (max-width: 928px) {
-  .avaliacoes-table {
-      width: 100%;
-      align-self: center;
-      
-  }
-  .teste{
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-  }
-}
-
 /* Media query para telas menores que 768px (tablets) */
 @media (max-width: 768px) {
-  .teste {
-      transform: skew(0deg);
-    }
+
   .avaliacoes-table {
     width: 100%;
     align-self: center; 
@@ -902,95 +882,10 @@ footer{
 }
 
 @media (max-width: 480px) {
-
-  .teste{
-    transform: skew(0deg);
-  }
-  
-  .avaliacoes-table{
-    transform: skew(0deg);
-    overflow-x: auto;
-    width: 100%;
-    min-width: 600px;
-    border-collapse: collapse;
-
+  .avaliacoes-container{
+    width: 650px;
   }
 
-  .avaliacoes-table thead {
-    display: none;
-  }
-  .avaliacoes-table td, .avaliacoes-table th {
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-    text-align: center;
-    position: relative;
-    word-break: break-word; 
-    white-space: normal; 
-
-  }
-  .avaliacoes-table td::before {
-    content: attr(data-label);
-    position: absolute;
-    left: 0;
-    width: 100%;
-    padding-left: 0px;
-    font-weight: bold;
-    text-align: left;
-  }
-
-}
-
-/* Media query para telas menores que 480px (smartphones) */
-@media (max-width: 480px) {
-
-
-  .avaliacoes-table{
-    transform: skew(0deg);
-    overflow-x: auto;
-    width: 100%;
-    min-width: 600px;
-    border-collapse: collapse;
-    font-size: .7rem;
-  }
-
-  .avaliacoes-table thead {
-    display: none;
-  }
-  .avaliacoes-table td {
-    display: block;
-    width: 95%;
-    box-sizing: border-box;
-    text-align: center;
-    position: relative;
-    word-break: break-word; 
-    white-space: normal; 
-  }
-  .avaliacoes-table td::before {
-    content: attr(data-label);
-    position: absolute;
-    left: 0;
-    width: 50%;
-    padding-left: 0px;
-    font-weight: bold;
-    text-align: left;
-  }
-
-  .btnAvaliarHq{
-    font-size: .8rem;
-  }
-}
-
-@media (max-width: 250px) {
- .avaliacoes-table{
-   font-size: .3rem; 
- }
-  .teste h1{
-    font-size: 0.8rem;
-  }
-  .teste img{
-    width: 0.8rem;
-  }
 }
 
 /*Comentário*/
