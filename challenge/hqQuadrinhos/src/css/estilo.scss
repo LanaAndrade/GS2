@@ -214,23 +214,32 @@ body{
 }
 
 /* Media query para telas menores que 768px (tablets) */
-@media (max-width: 768px) {
-  .nav-menu-mobile {
-      display: flex;
-  }
+@media (max-width: 769px) {
   .nav-menu{
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.8rem;
+    height: 75px;
+    width: 754px;
+    display: flex;
+    gap: 10px;
   }
+  #nav-menu-items{
+    gap:40px
+  }
+  #itemnav{
+    font-size: 15px;
+  }
+}
 
-  .nav-menu ul{
-    flex-direction: column;
-    gap: 2rem;
+@media (max-width: 430px) {
+  .nav-menu{
+    height: 75px;
+    width: 300px;
+    gap: 10px;
   }
-  #logo{
-    display: none;
+  #nav-menu-items{
+    gap:7px;
+  }
+  #itemnav{
+    font-size: 10px;
   }
 }
 

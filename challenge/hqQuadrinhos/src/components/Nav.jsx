@@ -46,28 +46,28 @@ function Nav() {
           </div>
         </Link>{' '}
 
-        <ul id="nav-menu-items" style={{ display: (windowWidth > 680 || isMenuVisible) ? 'flex' : 'none' }}>
+        <ul id="nav-menu-items" >
           <li>
-            <Link to="/apresentacao" className="tlink" onClick={toggleMenu}>
+            <Link to="/apresentacao" className="tlink" id="itemnav" onClick={toggleMenu}>
               Apresentação
             </Link>
           </li>
           
           <li>
-            <Link to="/HQs" className="HQs" onClick={toggleMenu}>
+            <Link to="/HQs" className="HQs" id="itemnav" onClick={toggleMenu}>
               HQs
             </Link>
           </li>
 
           <li>
-            <Link to="/contato" className="tlink" onClick={toggleMenu}>
+            <Link to="/contato" className="tlink" id="itemnav" onClick={toggleMenu}>
               Contato
             </Link>
           </li>
 
           <li>
-            <Link to="/avaliarHq" className="tlink" onClick={toggleMenu}>
-              Avaliar HQ
+            <Link to="/avaliarHq" className="tlink" id="itemnav" onClick={toggleMenu}>
+              AvaliarHQ
             </Link>
           </li>
         </ul>
