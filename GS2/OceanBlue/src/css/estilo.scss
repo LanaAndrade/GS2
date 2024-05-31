@@ -13,20 +13,22 @@ $footer-bg-color: #16586B;
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
-  font-weight: bold;
 }
 
 body{
   background: $bg-color;
 }
 
-/* *********** Nav *********** */.nav-menu {
+/* *********** Nav *********** */
+.nav-menu {
   background-color: $nav-bg-color; // Nav background color
   display: flex;
   padding: 0.9rem 2.8rem;
   justify-content: space-evenly;
   gap: 10.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px #B6CACF; // Temporarily increase size and opacity
+  position: relative; // Ensure it's properly positioned
+  z-index: 1; // Ensure it's above other elements
 }
 
 #logo {
@@ -48,10 +50,10 @@ body{
 
 .tlink {
   font-size: 1rem;
-  color: $details-dark-color; // Text color
+  color: $details-dark-color;
   text-decoration: none;
   padding: 0.6rem 0.8rem;
-  border: 1px solid $details-color; // Border color
+  border: 1px solid $details-color; 
   border-radius: 1rem;
   font-weight: 400;
 }
@@ -89,12 +91,13 @@ body{
 @media (max-width: 768px) {
   .nav-menu-mobile {
       display: flex;
-  }
+    }
   .nav-menu{
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 0.8rem;
+    box-shadow: none;
   }
 
   .nav-menu ul{
@@ -136,6 +139,8 @@ footer{
   align-items: flex-start;
   width: 100%;
   align-self: center;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
 }
 
 .Coluna1{
@@ -296,9 +301,11 @@ footer{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(to right, #000137 ,#9FDEE6 100px, #9FDEE6 1375px , #000137);
-  
+  background-color: $bg-color;
+}
 
+.azul{
+  background-color: #82B7C6;
 }
 
 .homeRow{
@@ -306,7 +313,7 @@ footer{
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  width: 90%;
+  width: 100%;
   height: 80vh;
 }
 
@@ -316,41 +323,38 @@ footer{
 }
 
 .imgHomeDiv{
-  width: 30rem; 
-  height: 30rem; 
+  width: 25rem; 
+  height: 25rem; 
   overflow: hidden; 
   display: flex;
   justify-content: center;
   align-items: center;
-  border: black;
+  border: $details-color;
   border-style: solid;
-  border-width: 2px;
+  border-width: 1px;
+  border-radius: 1rem;
 
 }
 
 .pHome{
-  font-size: 30px;
-  width: 35rem;
+  width: 25rem;
   text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+  color: $details-dark-color;
+  padding: 1rem;  
 }
 
 /* Media query para telas menores que 768px (tablets) */
-@media (max-width: 769px) {
-  .Projeto{
-    height: 100%;
-    width: 769px;
-  }
+@media (max-width: 768px) {
   .homeRow {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 300px;
+    width: 100%;
     gap: 3rem;
     padding-top: 3rem;
     padding-bottom: 3rem;
-  }
-  .pHome{
-    font-size: 20px;
   }
 }
 
@@ -360,15 +364,17 @@ footer{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: auto;
-    width: auto;
+    width: 100%;
+    gap: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
   .imgHomeDiv{
-    width: 500px;
-    height: 500px;
+    width: 100%;
+    height: auto;
   }
   .pHome{
-    font-size: 25px;
+    width: 100%;
   }
 }
 /* ************ Contato *********/
@@ -379,9 +385,8 @@ footer{
   grid-template-columns: repeat(2, 1fr); 
   grid-auto-rows: 1fr; 
   grid-auto-flow: row dense; 
-  background-color: #9FDEE6;
+  background-color: $bg-color;
   padding: 2rem; 
-  background-image: linear-gradient(to right, #000137 ,#9FDEE6 100px, #9FDEE6 1375px , #000137);
 }
 
 .pessoa {

@@ -16,7 +16,7 @@ function Projeto() {
         </p>
       </div>
 
-      <div className="homeRow">
+      <div className="homeRow azul">
 
         <p className='pHome'>
             Isso é problema relatado por diversos profissionais da saúde, pesquisas e até artigos ciêntificos. A desinformação pode em diversos casos prejudicar o andamento dos cuidados médicos, principalmente crianças, uma vez que as causa ditas anteriormente são mais problemáticas para elas. Desse jeito
