@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import ListaSensor from './ListaSensor';
 import '../css/estilo.scss';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Login() {
 
@@ -28,20 +29,23 @@ function Login() {
       {getUsuario && getSenha ? (
         <ListaSensor/>
       ) : (
-        <form className="frmLogin" onSubmit={handleSubmit} >
+        <div className="container  d-flex align-items-center justify-content-center vh-100">
+        <div className="card p-4 container-login" style={{maxWidth: '400px', width: '100%'}}>
+          <h2 className="text-center mb-4 txt-login">Login</h2>
+          <form onSubmit={handleSubmit}>
+            <div className="mb-3">
+              <input type="text" className="form-control container-login placeholder-cor" id="" placeholder="Seu usuário" ref={usuario}/>
+            </div>
+            <div className="mb-3">
+              <input type="password" className="form-control container-login placeholder-cor" id="passwordd" placeholder="Sua senha" ref={senha}/>
+            </div>
+            <div className="text-center">
+              <button type="submit" className="btn btn-primary btn-login">Login</button>
+            </div>
+          </form>
+        </div>
+        </div>
 
-            <h2 className="ttLogin">Bem-vindo faça seu login para continuar</h2>
-
-            <p className="fieldLogin">
-
-              <input type="text" className="inputLogin" placeholder="Seu Usuário" ref={usuario} />
-
-              <input type="password" className="inputLogin" placeholder="Sua senha" ref={senha} />
-
-            </p>
-            
-            <button className='btnInputLogin' type="submit">Fazer login</button>
-        </form>
       )}
     </section>
   );

@@ -6,11 +6,11 @@ import React, { useEffect } from 'react';
 
 function App() {
   useEffect(() => {
-    document.title = "Hospital dos Quadrinhos";
+    document.title = "OceanBlue";
 
     const favicon = document.querySelector("link[rel='icon']");
     if (favicon) {
-      favicon.href = '../src/assets/LOGO.svg';
+      favicon.href = '../src/assets/LOGO.png';
     }
   }, []);
 

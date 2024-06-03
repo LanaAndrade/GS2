@@ -54,7 +54,7 @@ function Nav() {
             </Link>
           </li>
           <li>
-            <Link to="/Login" className="tlink" onClick={toggleMenu}>
+            <Link to="/Login" className="btn-login-nav" onClick={toggleMenu}>
               Login
             </Link>
           </li>
