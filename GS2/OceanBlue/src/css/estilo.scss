@@ -356,14 +356,14 @@ footer{
     justify-content: flex-start;
   }
   .social-media{
-    gap: .4rem;
+    gap: .2rem;
     display: flex;
-    align-items: flex-start;
+    align-items: flex-start !important;
     justify-content: space-between;
   }
   .icon{
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1rem;
+    height: 1rem;
   }
   .frmFooter{
     width: 100%;
@@ -386,6 +386,10 @@ footer{
   background-color: $bg-color;
 }
 
+.d-inline-block img{
+  height: 100vh;
+}
+
 .azul{
   background-color: #82B7C6;
 }
@@ -404,6 +408,10 @@ footer{
   height: auto; 
 }
 
+.carousel-item img{
+  width: 100vw;
+}
+
 .imgHomeDiv{
   width: 25rem; 
   height: 25rem; 
@@ -419,7 +427,7 @@ footer{
 }
 
 .pHome{
-  width: 25rem;
+  width: 45rem;
   text-align: center;
   font-size: 1rem;
   font-weight: 400;
@@ -434,9 +442,17 @@ footer{
     align-items: center;
     justify-content: center;
     width: 100%;
+    height: fit-content;
     gap: 3rem;
     padding-top: 3rem;
-    padding-bottom: 3rem;
+    margin-bottom: 8rem;
+  }
+
+  .carousel-item img{
+    height: fit-content;
+  }
+  .carousel-item p{
+    display: none;
   }
 }
 
@@ -462,11 +478,11 @@ footer{
 /* ************ Contato *********/
 
 .contato {
-  min-height: 40rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); 
-  grid-auto-rows: 1fr; 
-  grid-auto-flow: row dense; 
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
   background-color: $bg-color;
   padding: 2rem; 
 }
@@ -495,33 +511,47 @@ footer{
 }
 
 .nomePessoa {
-  color: black;
+  color: $details-dark-color;
   font-size: 1.5rem;
 }
 
 
-
-
 @media (max-width: 768px) {
   .contato {background-image: linear-gradient(to right, #000137 ,#9FDEE6 100px, #9FDEE6 675px , #000137);
+  gap: 0rem !important;
   }
   .row {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
-    gap: 2rem;
+    padding: 0rem;
+    gap: 0rem !important;
   }
 }
 
-
 @media (max-width: 480px) {
-  .contato {background-image: linear-gradient(to right, #000137 ,#9FDEE6 270px , #000137);
+  .nomePessoa {
+    color: $details-dark-color;
+    font-size: 1rem;
+  }
+  
+  .imgPessoa{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100%;
+    gap: 0rem !important;
   }
 
-  .imgPessoa{
-    width: 80px;
-    height: 80px;
+  .contato{
+    height: fit-content;
+  }
+
+  .altura-min{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-height: 40rem;
   }
 }
 /* ************** Apresentação *****************/
@@ -723,22 +753,117 @@ footer{
 }
 
 .iframe300px {
-  width: 200px; /* Defina a largura desejada */
-  height: 150px;
-  background-color: yellow;
+  width: 300px; /* Defina a largura desejada */
+  height: 300px;
 }
 
-.row1, .row2{
+.row1, .row2, .fileira{
   display: flex;
   flex-direction: row;
 }
 
+.coluna{
+  display: flex;
+  flex-direction: column;
+}
+
 .iframe500px {
-  width: 300px; /* Defina a largura desejada */
-  height: 150px;
-  background-color: red;
+  width: 500px; /* Defina a largura desejada */
+  height: 300px;
 }
 
 iframe {
   display: flex; /* Ou flex */
+}
+
+.MQTTMessages{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  min-height: 100vh;
+  background-color: $light-color;
+  border: 1px solid $details-dark-color;
+}
+.MQTTMessages h1{
+  padding: 1rem;
+}
+.MQTTMessages ul li{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.MQTTMessages ul li p{
+  border: 1px solid $details-dark-color;
+  border-radius: 1rem;
+  padding: .5rem;
+}
+
+.msg{
+  width: 20rem;
+}
+
+.tpc{
+  width: 10rem;
+}
+
+.alerta {
+  background-color: #ec5353;
+}
+
+/* Media query para telas menores que 768px (tablets) */
+@media (max-width: 768px) {
+  .dashboards-container{
+    flex-direction: column;
+    height: fit-content;
+  }
+  .dashboards-container iframe{
+    width: 100%;
+  }
+  .column{
+    flex-direction: row;
+    gap: 0rem;
+  }
+  .row, .row2, .fileira{
+    flex-direction: column;
+    gap: 0rem;
+  }
+  .row2 iframe, .fileira iframe, .row iframe{
+    width: 100%;
+  }
+  .img-iframe{
+    height: fit-content;
+    margin-bottom: 10rem;
+  }
+
+  .MQTTMessages ul li{
+    flex-direction: column;
+    margin-left: -2rem;
+  }
+
+  .msg{
+    width: 100%;
+  }
+  
+  .tpc{
+    width: 100%;
+  }
+
+  .MQTTMessages{
+    padding: 0rem;
+    gap: 0rem;
+    padding: 0rem;
+    margin: 0rem;
+    justify-content: center;
+    align-self: center;
+  }
+
+
+}
+
+/* Media query para telas menores que 480px (smartphones) */
+@media (max-width: 480px) {
 }
