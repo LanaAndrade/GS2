@@ -71,16 +71,16 @@ function Footer() {
 
             <div className="Coluna2">
                 <p>
-                    Av. Dr. Enéas de Carvalho Aguiar, 255, Cerqueira César
+                Paulista, 1106 - 7º andar - Bela Vista
                 </p>
                 <p>
-                    05403-000
+                    01311-000
                 </p>
                 <p>
                     São Paulo - Brasil
                 </p>
                 <p>
-                    Tel.: (11) 2661-0000
+                    Tel.: (11) 3385-8010
                 </p>            
             </div>
 
