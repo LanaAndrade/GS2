@@ -597,85 +597,6 @@ footer{
     font-size: 8px;
   }
 }
-/* *************** Avaliar HQ **************** */
-
-.avaliacoes-container{
-  background: radial-gradient(darkcyan, #000137);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-}
-
-.teste{
-  background-color: #FAF83F; 
-  border: 4px solid black;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  transform: skew(-5deg);
-}
-
-
-.avaliacoes-table{
-  width:50rem;
-  border-collapse: separate; /* Make sure to set border-collapse to separate */
-  transform: skew(+5deg);
-}
-
-.avaliacoes-table td{
-  padding: 1.2rem 2rem;
-}
-
-.avaliacoes-table th{
-  padding: 0 10px;
-}
-
-.semItalico{
-  transform: skew(+5deg);
-}
-
-.btnAvaliarHq{
-  font-size: 1rem;
-  padding: 0.6rem;
-  cursor: pointer;
-  background-size: cover;
-  text-align: center;
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: black;
-  border: 2px solid black;
-  transform: skew(-5deg);
-  background-color: #92D050;
-  animation: pulse 1s infinite alternate;
-}
-
-/* Media query para telas menores que 768px (tablets) */
-@media (max-width: 768px) {
-
-  .avaliacoes-table {
-    width: 100%;
-    align-self: center; 
-    transform: skew(0deg);
-  }
-  
-}
-
-@media (max-width: 480px) {
-  .avaliacoes-container{
-    width: 650px;
-  }
-
-}
-
-/*Comentário*/
 
 /*************** Login **************/
 
@@ -811,7 +732,15 @@ iframe {
 }
 
 .alerta {
+  background-color: orange;
+}
+
+.erro{
   background-color: #ec5353;
+}
+
+.ok{
+  background-color: green;
 }
 
 /* Media query para telas menores que 768px (tablets) */
@@ -864,6 +793,3 @@ iframe {
 
 }
 
-/* Media query para telas menores que 480px (smartphones) */
-@media (max-width: 480px) {
-}

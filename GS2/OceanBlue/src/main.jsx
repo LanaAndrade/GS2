@@ -6,7 +6,6 @@ import Contato from './routes/Contato.jsx'
 import Error from './routes/Error.jsx';
 import Projeto from './routes/Projeto.jsx';
 import Apresentacao from './routes/Apresentacao.jsx';
-import AvaliarHQ from './routes/avaliarHq.jsx';
 import Login from './routes/Login.jsx';
 import ListaSensor from './routes/ListaSensor.jsx';
 
@@ -20,7 +19,6 @@ const router = createBrowserRouter ([
       {path: '/Apresentacao', element: <Apresentacao />},
       {path: '/Contato', element: <Contato />},
       {path: '/Login', element: <Login />},
-      {path: '/AvaliarHQ', element: <AvaliarHQ />},
       {path: '/ListaSensor', element: <ListaSensor />},
     ]
   }
