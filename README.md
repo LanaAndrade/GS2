@@ -13,8 +13,8 @@ O monitoramento da Ocean Blue dura por volta de 6 meses e, ao final, um levantam
 Será utilizado o site OceanBlue como forma de monitoramento em tempo real dos dados enviados pelos sensores.
   
 ## Como rodar?
-Faça o login em nosso site, e siga as instruções abaixo:
-[Instruções em:](https://github.com/LanaAndrade/GS2-Edge/tree/main)
+Faça o login em nosso site, e siga as instruções:
+[instruções](https://github.com/LanaAndrade/GS2-Edge/tree/main)
 
 ## Código Fonte - Simulador
 [Link para o simulador](https://wokwi.com/projects/399804222651837441)
