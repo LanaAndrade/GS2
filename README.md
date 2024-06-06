@@ -1,8 +1,8 @@
-# Edge Computing GS2 - OceanBlue
+# Front-end & Web Development - GS2 - OceanBlue
 
 > Status: Developed
 
-<img width="960" alt="image" src="https://github.com/LanaAndrade/GS2-Edge/assets/82892986/42d31692-2e89-4d8b-96d2-605291f87675">
+![image](https://github.com/LanaAndrade/GS2/assets/82892986/83703354-bb91-4da2-afb1-c88594ff27d4)
 
 O principal problema é a sobre-exploração e a falta de regulamentação adequada, que colocam em risco a biodiversidade marinha e os ecossistemas oceânicos. A sobrecarga da atividade humana nos oceanos leva à degradação dos habitats marinhos, perda de biodiversidade, poluição plástica e alterações climáticas, afetando negativamente tanto a vida marinha quanto os serviços ecossistêmicos que os oceanos fornecem aos humanos. Além disso, a falta de cooperação internacional e políticas públicas eficazes para gerenciar esses recursos contribui para a crise ambiental marinha, tornando difícil alcançar uma “Economia Azul “sustentável que beneficie tanto a sociedade quanto a natureza.
 
@@ -13,7 +13,7 @@ O monitoramento da Ocean Blue dura por volta de 6 meses e, ao final, um levantam
 Será utilizado o site OceanBlue como forma de monitoramento em tempo real dos dados enviados pelos sensores.
   
 ## Como rodar?
-Faça o login em nosso site, e siga as instruções:
+Faça o login em nosso site, e siga as instruções em:
 [instruções](https://github.com/LanaAndrade/GS2-Edge/tree/main)
 
 ## Código Fonte - Simulador
