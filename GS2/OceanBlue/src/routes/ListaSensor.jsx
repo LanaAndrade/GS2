@@ -55,12 +55,20 @@ const ListaSensor = () => {
         <div className="MQTTMessages">
           <h1>Monitoramento</h1>
           <ul>
-          {messages.map((msg, index) => (
-            <li className="MensagemMQTT" key={index}>
-              <p className='tpc'>{msg.topic}:</p> 
-              <p className={`msg ${msg.message.includes('Alerta') ? 'alerta' : ''}`}>{msg.message}</p>
-            </li>
-          ))}
+            {messages.map((msg, index) => {
+              let className = 'msg ok';
+              if (msg.message.includes('inválido')) {
+                className = 'msg erro';
+              } else if (msg.message.includes('Alerta')) {
+                className = 'msg alerta';
+              }
+              return (
+                <li className="MensagemMQTT" key={index}>
+                  <p className='tpc'>{msg.topic}:</p>
+                  <p className={className}>{msg.message}</p>
+                </li>
+              );
+            })}
           </ul>
         </div>
       </div>
