@@ -565,13 +565,14 @@ footer{
   justify-content: center;
   gap: 2rem;
   font-size: 25px;
-  color: aliceblue;
-  background: radial-gradient(darkcyan, #000137);
+  color: $details-dark-color;
+  background: $bg-color;
 }
 
 
 #iframe-pitch{
-  border: 2px solid black;
+  border: 1px solid $details-color;
+  border-radius: 2rem;
   width: 700px;
   height: 395px;
 }
